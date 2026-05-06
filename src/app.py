@@ -27,12 +27,14 @@ css_path = (
     / "assets"
     / "styles.css"
 )
-with open(css_path) as f:
+with open(
+    css_path
+) as f:
 
     st.markdown(
         f"<style>{f.read()}</style>",
         unsafe_allow_html=True,
-    ) 
+    )
 
 st.title(
     "✨ Daily Reset Tracker"

@@ -38,6 +38,6 @@ def render_analytics():
     )
 
     st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
+    fig,
+    width="stretch"
+)

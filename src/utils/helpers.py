@@ -1,22 +1,43 @@
 from utils.redis_db import redis
 
-def save_habit(user, habit, value):
+def get_date_key(user, selected_date):
 
-    key = f"user:{user}:habits"
+    return (
+        f"user:{user}:habits:{selected_date}"
+    )
+
+def save_habit(
+    user,
+    selected_date,
+    habit,
+    value
+):
+
+    key = get_date_key(
+        user,
+        selected_date
+    )
 
     redis.hset(
         key,
-        habit,
-        value
+        values={
+            habit: str(value)
+        }
     )
 
-def get_habits(user):
+def get_habits(
+    user,
+    selected_date
+):
 
-    key = f"user:{user}:habits"
+    key = get_date_key(
+        user,
+        selected_date
+    )
 
     data = redis.hgetall(key)
 
-    if data is None:
+    if not data:
         return {}
 
     return data
