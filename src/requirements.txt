@@ -4,3 +4,6 @@ pandas
 streamlit-lottie
 upstash-redis
 python-dotenv
+streamlit-calendar
+streamlit-extras
+numpy
