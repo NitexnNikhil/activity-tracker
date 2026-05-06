@@ -1,0 +1,42 @@
+.stApp {
+    background: linear-gradient(
+        135deg,
+        #0f0f0f,
+        #1a1a1a
+    );
+    color: white;
+}
+
+h1,h2,h3,h4 {
+    color: white;
+}
+
+div[data-testid="stCheckbox"] {
+    background: rgba(255,255,255,0.06);
+    padding: 12px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.block-container {
+    padding-top: 2rem;
+}
+
+.stButton button {
+    border-radius: 16px;
+    background: linear-gradient(
+        135deg,
+        #ff0080,
+        #7928ca
+    );
+    color: white;
+    border: none;
+}
+
+.glass-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+}
